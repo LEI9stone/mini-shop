@@ -1,4 +1,5 @@
 import Hapi from '@hapi/hapi';
+
 import appConfig from './config/index.js';
 import helloHapi from './routes/hello-hapi.js';
 import test from './routes/test.js';

@@ -1,4 +1,6 @@
+import 'dotenv/config';
+const {env} = process.env;
 export default {
-  host: '0.0.0.0',
-  port: 3000
+  host: env.HOST,
+  port: env.PORT
 }
