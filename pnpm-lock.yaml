@@ -16,6 +16,9 @@ dependencies:
   hapi-swagger:
     specifier: ^16.0.1
     version: registry.npmmirror.com/hapi-swagger@16.0.1(@hapi/hapi@21.3.1)(joi@17.9.2)(openapi-types@12.1.0)
+  joi:
+    specifier: ^17.9.2
+    version: registry.npmmirror.com/joi@17.9.2
 
 devDependencies:
   pm2:

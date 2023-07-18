@@ -1,10 +1,7 @@
 import Hapi from '@hapi/hapi';
 import appConfig from './config/index.js';
 import pluginsHapiSwagger from './config/hapi-swagger.js';
-import helloHapi from './routes/hello-hapi.js';
-import test from './routes/test.js';
-
-// console.log('pluginsHapiSwagger', pluginsHapiSwagger);
+import shop from './routes/shops.js';
 
 const init = async () => {
   const server = Hapi.server({ ...appConfig });
@@ -12,7 +9,7 @@ const init = async () => {
   await server.register([...pluginsHapiSwagger]);
   await server.start();
 
-  server.route([helloHapi, test]);
+  server.route([...shop]);
 
   console.log('Server running on %s', server.info.uri);
 }
