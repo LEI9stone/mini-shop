@@ -1,4 +1,5 @@
 import Joi from 'joi';
+import models from '../models/index.js';
 const GROUP_NAME = 'shops';
 
 export default [
@@ -6,7 +7,8 @@ export default [
     method: "GET",
     path: `/${GROUP_NAME}`,
     async handler(request, h) {
-      return h.response('店铺列表1');
+      const result = await models.shops.findAll();
+      return h.response(result);
     },
     options: {
       tags: ['api', GROUP_NAME],
