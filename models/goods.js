@@ -4,8 +4,12 @@ export default function goods(sequelize, DataTypes) {
     {
       id: {
         type: DataTypes.INTEGER,
+        // 是否为主键
         primaryKey: true,
+        // 自动自增
         autoIncrement: true,
+        // 是否允许为空
+        allowNull: false,
       },
       shop_id: {
         type: DataTypes.INTEGER,
